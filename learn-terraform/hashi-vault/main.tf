@@ -9,12 +9,12 @@ data "vault_generic_secret" "secret" {
   path = "demo/ssh"
 }
 
-resource "local_file" "dev" {
+resource "local_file" "foo" {
   content  = jsonencode(data.vault_generic_secret.secret.data)
   filename = "/tmp/result"
 }
 
-resource "local_file" "test" {
+resource "local_file" "fool" {
   content  = data.vault_generic_secret.secret.data["password"]
-  filename = "/tmp/result.pass"
+  filename = "/tmp/result-pass"
 }
