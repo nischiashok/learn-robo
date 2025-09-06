@@ -6,7 +6,7 @@ provider "vault" {
 variable "token" {}
 
 data "vault_generic_secret" "secret" {
-  path = "demo/SSH"
+  path = "demo/data/SSH"
 }
 
 resource "local_file" "foo" {
