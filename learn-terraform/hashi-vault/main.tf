@@ -11,10 +11,10 @@ data "vault_generic_secret" "secret" {
 
 resource "local_file" "foo" {
   content  = jsonencode(data.vault_generic_secret.secret.data)
-  filename = "/tmp/result"
+  filename = "/tmp/vault"
 }
 
 resource "local_file" "fool" {
   content  = data.vault_generic_secret.secret.data["password"]
-  filename = "/tmp/result-pass"
+  filename = "/tmp/vault-pass"
 }
