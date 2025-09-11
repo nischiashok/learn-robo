@@ -1,3 +1,4 @@
+
 provider "vault" {
   address = "http://vault.omshiva.shop:8200"
   token   = var.token
