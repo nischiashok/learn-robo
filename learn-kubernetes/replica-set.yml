@@ -29,3 +29,4 @@ spec:
       image: nginx:1.14.2
       ports:
         - containerPort: 80
+# In kubernetes we always maintain unique labels in pod labels.
